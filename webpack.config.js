@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   },
   mode: "production",
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({ title: "Webpack App for DaftAcademy" })],
   module: {
     rules: [
       {
