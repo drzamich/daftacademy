@@ -1,0 +1,22 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  li {
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: $color-shadowgreen;
+    font-family: $font-family-navigation;
+
+    &:hover,
+    &.active {
+      color: $color-bluesmoke;
+      text-decoration: underline;
+    }
+  }
+}

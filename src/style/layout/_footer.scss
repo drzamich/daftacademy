@@ -1,0 +1,17 @@
+footer {
+  padding: 30px 35px 0 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: $font-family-footer;
+  font-size: $font-size-footer;
+  color: $color-powderash;
+
+  a {
+    text-decoration: none;
+    color: $color-bluesmoke;
+  }
+}
+
+.follow {
+  text-align: right;
+}

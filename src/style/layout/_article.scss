@@ -1,0 +1,68 @@
+.drink-list {
+  display: grid;
+  grid-template-columns: repeat(2, $tile-size) 270px;
+  grid-row-gap: 35px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  max-height: 520px;
+  overflow: scroll;
+  padding: 15px 0;
+
+  a {
+    display: table;
+    width: $tile-size;
+    height: $tile-size;
+    text-align: center;
+    background-size: $tile-size $tile-size;
+    color: $color-drink-list;
+    font-size: $font-size-tile;
+    text-decoration: none;
+    font-family: $font-family-tiles;
+    font-weight: bold;
+    box-shadow: 2px 2px 19px -5px rgba(0, 0, 0, 0.43);
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &.active {
+      width: $tile-size - 2 * $tile-border-width;
+      height: $tile-size - 2 * $tile-border-width;
+      border: $tile-border-width solid $color-frangipani;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-three-columns) {
+  .drink-list {
+    grid-template-columns: repeat(2, $tile-size);
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: $breakpoint-two-columns) {
+  .drink-list {
+    grid-template-columns: $tile-size;
+  }
+}
+
+.bijou {
+  background: url(#{$path-to-images}bijou.jpg);
+}
+.eggnogg {
+  background: url(#{$path-to-images}eggnogg.jpg);
+}
+.negroni {
+  background: url(#{$path-to-images}negroni.jpg);
+}
+.rattlesnake {
+  background: url(#{$path-to-images}rattlesnake.jpg);
+}
+.mojito {
+  background: url(#{$path-to-images}mojito.jpg);
+}
+.zinger {
+  background: url(#{$path-to-images}zinger.jpg);
+}

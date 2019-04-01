@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+
+@import "base/reset.scss";
+
+@import "abstracts/variables.scss";
+
+@import "layout/article.scss", "layout/body.scss", "layout/content.scss",
+  "layout/footer.scss", "layout/header.scss", "layout/nav.scss";
