@@ -1,8 +1,9 @@
+'use strict';
 import {makeRangeIterator, updateDomPlaceholder, getNextStep} from './clock-helpers.js';
 
 const units = ['second', 'minute', 'hour'];
-const minValues = [0, 0, 1]; // minimum values that can be shown on the clock
-const maxValues = [59, 59, 12]; // maximum values than can be shown on the clock
+const minValues = [0, 0, 1];
+const maxValues = [59, 59, 12];
 
 const d = new Date();
 const curTime = [d.getSeconds(), d.getMinutes(), d.getHours() < 12 ? d.getHours() : d.getHours() - 12];
@@ -29,8 +30,19 @@ const updateClock = (unit) => {
   steps[i] = getNextStep(iterators[i]);
 };
 
-const secondInMiliseconds = 1;
-
-setInterval(() => {
+let tick = setInterval(() => {
   updateClock('second');
-}, secondInMiliseconds);
+}, 1000);
+
+const changeSpeed = () => {
+  const newInterval = lengthOfSec.value;
+  clearInterval(tick);
+  tick = setInterval(() => {
+    updateClock('second');
+  }, newInterval);
+};
+
+const lengthOfSec = document.querySelector('#lengthOfSec');
+lengthOfSec.addEventListener('input', changeSpeed);
+
+
