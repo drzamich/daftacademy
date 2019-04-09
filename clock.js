@@ -11,10 +11,10 @@ const updateDomPlaceholder = (id, value) => {
   document.getElementById(id).innerHTML = value.toString().padStart(2, '0');
 };
 
-const date = new Date();
-const secondInMiliseconds = 1;
+const secondInMiliseconds = 1000;
 
-const currentHour = date.getHours();
+const date = new Date();
+const currentHour = date.getHours() < 12 ? date.getHours() : date.getHours()-12;
 const currentMinute = date.getMinutes();
 const currentSecond = date.getSeconds();
 
