@@ -15,5 +15,4 @@ const getNextStep = (iterator) => {
   return Object.assign({}, iterator.next());
 };
 
-
 export {makeRangeIterator, updateDomPlaceholder, getNextStep};

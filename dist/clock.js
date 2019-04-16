@@ -44,5 +44,3 @@ const changeSpeed = () => {
 
 const lengthOfSec = document.querySelector('#lengthOfSec');
 lengthOfSec.addEventListener('input', changeSpeed);
-
-
