@@ -1,0 +1,9 @@
+.test {
+    display: none;
+}
+
+@media (pointer: coarse) and (hover: none) and (min-width: 376px) and (max-width: 767px){
+    .test {
+        display: block;
+    }
+}
